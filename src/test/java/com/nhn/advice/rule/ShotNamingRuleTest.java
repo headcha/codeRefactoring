@@ -11,7 +11,7 @@ import static org.mockito.Mockito.*;
 
 import com.nhn.advice.rule.model.Advice;
 import com.nhn.advice.rule.model.ShotNaming;
-import com.nhn.common.util.JavaCodeFormatter;
+import com.nhn.parser.java.JavaCodeFormatter;
 import com.nhn.test.util.LegacyCodeUtil;
 
 

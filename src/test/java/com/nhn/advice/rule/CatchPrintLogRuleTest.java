@@ -7,7 +7,7 @@ import org.junit.Test;
 
 import com.nhn.advice.rule.model.Advice;
 import com.nhn.advice.rule.model.CatchPrintLog;
-import com.nhn.common.util.JavaCodeFormatter;
+import com.nhn.parser.java.JavaCodeFormatter;
 import com.nhn.test.util.LegacyCodeUtil;
 
 public class CatchPrintLogRuleTest {

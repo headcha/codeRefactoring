@@ -8,7 +8,7 @@ import org.eclipse.jface.text.BadLocationException;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 
-import com.nhn.common.util.JavaCodeFormatter;
+import com.nhn.parser.java.JavaCodeFormatter;
 
 
 public class Legacy {

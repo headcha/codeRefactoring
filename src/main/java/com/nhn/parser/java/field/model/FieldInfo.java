@@ -27,7 +27,7 @@ public class FieldInfo {
 		return ModifierSet.isFinal(this.getModifier()) == false;
 	}
 
-	public int getModifier() {
+	private int getModifier() {
 		return fieldDeclaration.getModifiers();
 	}
 
@@ -42,5 +42,9 @@ public class FieldInfo {
 	
 	public boolean isShotName() {
 		return getFieldName().length() <= 4;
+	}
+
+	public boolean isPublic() {
+		return ModifierSet.isPublic(this.getModifier());
 	}
 }

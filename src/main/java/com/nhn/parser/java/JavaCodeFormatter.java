@@ -1,4 +1,4 @@
-package com.nhn.common.util;
+package com.nhn.parser.java;
 
 import java.util.Map;
 

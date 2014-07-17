@@ -10,10 +10,10 @@ import com.nhn.advice.rule.model.Advice;
 import com.nhn.advice.rule.model.DeepNesting;
 import com.nhn.advice.rule.model.LongMethod;
 import com.nhn.advice.rule.model.ManyParameter;
-import com.nhn.common.util.JavaSourceUtil;
 import com.nhn.common.util.StringUtil;
 import com.nhn.parser.java.method.MethodParser;
 import com.nhn.parser.java.method.model.MethodInfo;
+import com.nhn.parser.java.source.SourceParser;
 
 /**
  * 파라메터 갯수를 체크해 어드바이스 한다

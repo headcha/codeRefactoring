@@ -4,7 +4,7 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-import com.nhn.common.util.JavaCodeFormatter;
+import com.nhn.parser.java.JavaCodeFormatter;
 import com.nhn.parser.java.method.model.MethodInfo;
 import com.nhn.test.util.LegacyCodeUtil;
 

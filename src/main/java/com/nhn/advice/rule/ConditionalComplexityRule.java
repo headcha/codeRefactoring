@@ -4,8 +4,8 @@ import org.apache.commons.lang3.StringUtils;
 
 import com.nhn.advice.rule.model.Advice;
 import com.nhn.advice.rule.model.ConditionalComplexity;
-import com.nhn.common.util.JavaSourceUtil;
 import com.nhn.common.util.StringUtil;
+import com.nhn.parser.java.source.SourceParser;
 
 class ConditionalComplexityRule implements AdviceRule {
 
@@ -21,8 +21,8 @@ class ConditionalComplexityRule implements AdviceRule {
 			if (StringUtils.isEmpty(legacy))
 				continue;
 
-			if (JavaSourceUtil.isConditionalString(legacy)) 
-				if (JavaSourceUtil.getConditionalCount(legacy) > 1)
+			if (SourceParser.isConditionalString(legacy)) 
+				if (SourceParser.getConditionalCount(legacy) > 1)
 					advice.addLegacyLineNumber(lineIndex + 1);
 			
 		}
