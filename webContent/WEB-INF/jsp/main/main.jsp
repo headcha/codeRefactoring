@@ -103,13 +103,13 @@ body {
 
 						<p class="text-left">2014.02.04 업데이트</p>
 						<p class="text-left">
-							<small>코드 포멧팅 적용 - 기존: nhn 표준 포멧 파일만 분석 가능 -> 개선 : .java
+							<small>코드 포멧팅 적용 - 기존: nhn 표준 포멧 파일만 분석 가능  개선 : .java
 								파일이기만 하면 어떤 양식이던 상관없이 분석 가능합니다.</small>
 						</p>
 
 						<p class="text-left">2014.02.10 업데이트</p>
 						<p class="text-left">
-							<small>파일 업로드 개선 - 기존: single file upload -> 개선 : multi
+							<small>파일 업로드 개선 - 기존: single file upload - 개선 : multi
 								file upload</small>
 						</p>
 						<p class="text-left">

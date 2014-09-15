@@ -2,12 +2,7 @@ package com.headcha.code.service;
 
 import org.junit.Test;
 
-import static org.hamcrest.CoreMatchers.*;
 import static org.junit.Assert.*;
-import static org.junit.matchers.JUnitMatchers.*;
-import static org.mockito.Matchers.*;
-import static org.mockito.Mockito.*;
-
 import com.headcha.code.model.AdviceCollection;
 import com.headcha.code.service.CodeAdviceService;
 import com.headcha.util.LegacyCodeUtil;

@@ -2,7 +2,6 @@ package com.headcha.code.controller;
 
 import java.io.IOException;
 import java.util.Iterator;
-import java.util.List;
 
 import org.eclipse.jface.text.BadLocationException;
 import org.json.JSONArray;

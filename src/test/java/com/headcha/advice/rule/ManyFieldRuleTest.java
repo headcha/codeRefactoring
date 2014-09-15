@@ -7,16 +7,7 @@ import com.headcha.advice.rule.model.Advice;
 import com.headcha.advice.rule.model.ManyField;
 import com.headcha.util.LegacyCodeUtil;
 
-import static org.hamcrest.Matcher.*;
 import static org.junit.Assert.*;
-import static org.mockito.Matchers.*;
-import static org.mockito.Mockito.*;
-
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.mockito.Mock;
-import org.mockito.runners.MockitoJUnitRunner;
 public class ManyFieldRuleTest {
 	private ManyFieldRule manyFieldRule = new ManyFieldRule();
 	
