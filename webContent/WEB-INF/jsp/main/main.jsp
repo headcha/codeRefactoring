@@ -132,7 +132,7 @@ body {
 			<div class="span2" id="wrap_result" style="display: none;">
 				<div class="row-fluid" style="display: none;" id="wrap_hint">
 					<button class="btn" data-toggle="modal"
-						style="margin-bottom: 10px; float: right;">리펙터링 도움말</button>
+						style="margin-bottom: 10px; float: right;">리펙터링 도움말3432452345</button>
 				</div>
 				<div class="row-fluid">
 					<div class="well sidebar-nav">
