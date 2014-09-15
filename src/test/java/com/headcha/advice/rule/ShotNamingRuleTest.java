@@ -3,12 +3,7 @@ package com.headcha.advice.rule;
 import org.eclipse.jface.text.BadLocationException;
 import org.junit.Test;
 
-import static org.hamcrest.CoreMatchers.*;
 import static org.junit.Assert.*;
-import static org.junit.matchers.JUnitMatchers.*;
-import static org.mockito.Matchers.*;
-import static org.mockito.Mockito.*;
-
 import com.headcha.advice.rule.AdviceRule;
 import com.headcha.advice.rule.ShotNamingRule;
 import com.headcha.advice.rule.model.Advice;

@@ -2,7 +2,6 @@ package com.headcha.advice.rule;
 
 import static org.junit.Assert.*;
 
-import org.json.JSONObject;
 import org.junit.Test;
 
 import com.headcha.advice.rule.CatchPrintLogRule;

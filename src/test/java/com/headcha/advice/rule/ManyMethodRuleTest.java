@@ -8,11 +8,7 @@ import com.headcha.advice.rule.model.Advice;
 import com.headcha.advice.rule.model.ManyMethod;
 import com.headcha.util.LegacyCodeUtil;
 
-import static org.hamcrest.CoreMatchers.*;
 import static org.junit.Assert.*;
-import static org.junit.matchers.JUnitMatchers.*;
-import static org.mockito.Matchers.*;
-import static org.mockito.Mockito.*;
 
 public class ManyMethodRuleTest {
 	private AdviceRule manyMethodRuleService = new ManyMethodRule();
