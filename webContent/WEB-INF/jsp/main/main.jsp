@@ -99,13 +99,13 @@ body {
 						<p>사용중 개선 의견은 언제든 메일 주세요.</p>
 						<p>chrome 에 최적화 되어있습니다.</p>
 
-						<p class="text-left">2014.02.04 업데이트</p>
+						<p class="text-left">2014.06.04 업데이트</p>
 						<p class="text-left">
 							<small>코드 포멧팅 적용 - 기존: nhn 표준 포멧 파일만 분석 가능  개선 : .java
 								파일이기만 하면 어떤 양식이던 상관없이 분석 가능합니다.</small>
 						</p>
 
-						<p class="text-left">2014.02.10 업데이트</p>
+						<p class="text-left">2014.06.10 업데이트</p>
 						<p class="text-left">
 							<small>파일 업로드 개선 - 기존: single file upload - 개선 : multi
 								file upload</small>
@@ -113,7 +113,7 @@ body {
 						<p class="text-left">
 							<small>분석 알고리즘 개선 - japa parser 적용 , jdt core 적용</small>
 						</p>
-						<p class="text-left">2014.02.11 업데이트</p>
+						<p class="text-left">2014.06.11 업데이트</p>
 						<p class="text-left">
 							<small>소스 코드 수정기능 추가</small>
 						</p>
