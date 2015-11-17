@@ -6,10 +6,6 @@
 	<packaging>war</packaging>
 
 	<properties>
-		<jdbc.driver>oracle.jdbc.driver.OracleDriver</jdbc.driver>
-		<jdbc.url>jdbc:oracle:thin:@mkk.iptime.org:1521:ora11</jdbc.url>
-		<jdbc.username>scott</jdbc.username>
-		<jdbc.userpw>tiger</jdbc.userpw>
 		<file.baseUploadPath>${basedir}/documents</file.baseUploadPath>
 	</properties>
 
