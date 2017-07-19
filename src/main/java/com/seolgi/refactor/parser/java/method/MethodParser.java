@@ -19,7 +19,7 @@ public class MethodParser {
 	public MethodParser(String legacy) {
 		this.legacy = legacy;
 		try {
-			CompilationUnit compilationUnit = JavaParser.parse(IOUtils.toInputStream(legacy));
+			CompilationUnit compilationUnit = JavaParser.parse(legacy);
 			new MethodVisitor().visit(compilationUnit, null);
 		} catch (Exception ex) {
 			throw new RuntimeException(ex);

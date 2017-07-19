@@ -46,8 +46,9 @@ public class MethodParserTest {
 		String legacy = JavaCodeFormatter.reFormat(LegacyCodeUtil.getAnotationMethodInfoCode());
 		MethodParser methodParser = new MethodParser(legacy);
 		MethodInfo methodInfo = methodParser.getMethodInfoList().get(0);
-			
+
 		System.out.println(methodInfo.getBodyString());
+
 		
 	}
 	

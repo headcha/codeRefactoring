@@ -35,17 +35,17 @@ public class MethodInfo {
 
 	private String createMethodBodyString() {
 		StringBuilder builder = new StringBuilder();
-		
+
 		String[] legacyArray = StringUtil.splitNewLine(legacy);
 		int totalBodyLineIndex = getTotalBodyLine();
 		for (int indexI = 0; indexI < totalBodyLineIndex; indexI++) {
 			int methodLineIndex = getStartLine() + indexI ;
 			builder.append(legacyArray[methodLineIndex]);
-			
+
 			if (indexI < totalBodyLineIndex)
 			builder.append("\n");
 		}
-		
+
 		return builder.toString();
 	}
 
@@ -80,7 +80,7 @@ public class MethodInfo {
 
 	public int getStartLine() {
 		int annotationLength = getAnotationLineLength();
-		
+
 		return methodDeclaration.getBegin().get().line + annotationLength;
 	}
 
