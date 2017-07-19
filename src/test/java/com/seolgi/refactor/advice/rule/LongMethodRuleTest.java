@@ -17,11 +17,11 @@ public class LongMethodRuleTest {
 	public void testCheckRule() throws Exception {
 		Advice expectedAdvice = createActualAdvice();
 		String legacy = JavaCodeFormatter.reFormat(LegacyCodeUtil.getLongMethodCode());
-		System.out.println(legacy);
+
 		Advice actualAdvice = adviceService.checkRule(legacy);
 
 		assertTrue(actualAdvice.isAdvice());
-		
+
 		assertArrayEquals(expectedAdvice.getLegacyLineNumberList().toArray(), actualAdvice.getLegacyLineNumberList().toArray());
 		
 	}
@@ -31,7 +31,7 @@ public class LongMethodRuleTest {
 	private Advice createActualAdvice() {
 		Advice actualAdvice = new LongMethod();
 
-		for (int indexI = 23; indexI < 57; indexI++) {
+		for (int indexI = 22; indexI < 52; indexI++) {
 			actualAdvice.addLegacyLineNumber(indexI);
 		}
 

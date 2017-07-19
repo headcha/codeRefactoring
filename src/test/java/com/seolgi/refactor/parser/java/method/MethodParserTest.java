@@ -33,11 +33,11 @@ public class MethodParserTest {
 		MethodInfo methodInfo = methodParser.getMethodInfoList().get(0);
 		
 		assertEquals(methodInfo.getStartLine(), 22);
-		assertEquals(methodInfo.getEndLine(), 34);
-		assertEquals(methodInfo.getBodyStartLine(), 23);
+		assertEquals(methodInfo.getEndLine(), 33);
+		assertEquals(methodInfo.getBodyStartLine(), 21);
 		
-		assertEquals(methodInfo.getBodyEndLine(), 33);
-		assertEquals(methodInfo.getTotalBodyLine(), 11);
+		assertEquals(methodInfo.getBodyEndLine(), 32);
+		assertEquals(methodInfo.getTotalBodyLine(), 10);
 		
 	}
 	
