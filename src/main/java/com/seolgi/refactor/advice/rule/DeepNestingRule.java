@@ -40,7 +40,7 @@ class DeepNestingRule implements AdviceRule {
 				if (StringUtils.isBlank(legacy) || legacy.trim().equals("{") || legacy.trim().equals("}"))
 					continue;
 				
-				if (legacy.startsWith("\t\t\t\t\t")) 
+				if (legacy.startsWith("          "))
 					advice.addLegacyLineNumber(methodStartLine + lineIndex);
 			}
 		}

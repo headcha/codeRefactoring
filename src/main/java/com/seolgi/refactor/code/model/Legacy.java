@@ -1,11 +1,10 @@
 package com.seolgi.refactor.code.model;
 
-import java.io.IOException;
-
 import com.seolgi.refactor.parser.java.JavaCodeFormatter;
 import org.apache.commons.io.IOUtils;
-import org.eclipse.jface.text.BadLocationException;
 import org.springframework.web.multipart.MultipartFile;
+
+import java.io.IOException;
 
 
 public class Legacy {
@@ -27,7 +26,7 @@ public class Legacy {
 		this.adviceCollection = adviceCollection;
 	}
 	
-	public static Legacy createFromMultipartFile(MultipartFile multipartFile) throws IOException, BadLocationException {
+	public static Legacy createFromMultipartFile(MultipartFile multipartFile) throws IOException {
 		Legacy legacy = new Legacy();
 		legacy.fileName = multipartFile.getOriginalFilename();
 		String legacyCode = IOUtils.toString(multipartFile.getBytes(), "UTF-8");
@@ -35,7 +34,7 @@ public class Legacy {
 		return legacy;
 	}
 	
-	public static Legacy createFromString(String legacyCode , String fileName) throws IOException, BadLocationException {
+	public static Legacy createFromString(String legacyCode , String fileName) throws IOException {
 		Legacy legacy = new Legacy();
 		legacy.fileName = fileName;
 		legacy.codeBody = JavaCodeFormatter.reFormat(legacyCode);

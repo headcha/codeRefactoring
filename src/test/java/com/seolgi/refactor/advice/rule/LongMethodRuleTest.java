@@ -17,6 +17,7 @@ public class LongMethodRuleTest {
 	public void testCheckRule() throws Exception {
 		Advice expectedAdvice = createActualAdvice();
 		String legacy = JavaCodeFormatter.reFormat(LegacyCodeUtil.getLongMethodCode());
+		System.out.println(legacy);
 		Advice actualAdvice = adviceService.checkRule(legacy);
 
 		assertTrue(actualAdvice.isAdvice());

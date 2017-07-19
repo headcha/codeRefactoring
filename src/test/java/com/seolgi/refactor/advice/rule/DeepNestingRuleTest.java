@@ -19,12 +19,12 @@ public class DeepNestingRuleTest {
 		
 		Advice actualAdvice = createActualAdvice();
 		String legacy = JavaCodeFormatter.reFormat(LegacyCodeUtil.getDeepNestingCode());
-
-		Advice expectedsAdvice = adviceService.checkRule(legacy);
-		System.out.println(expectedsAdvice.getLegacyLineNumberList());
-		assertTrue(expectedsAdvice.isAdvice());
+		System.out.println(legacy);
+		Advice expectedAdvice = adviceService.checkRule(legacy);
+		System.out.println(expectedAdvice.getLegacyLineNumberList());
+		assertTrue(expectedAdvice.isAdvice());
 		
-		assertArrayEquals(expectedsAdvice.getLegacyLineNumberList().toArray(), actualAdvice.getLegacyLineNumberList().toArray());
+		assertArrayEquals(expectedAdvice.getLegacyLineNumberList().toArray(), actualAdvice.getLegacyLineNumberList().toArray());
 	}
 
 	private Advice createActualAdvice() {

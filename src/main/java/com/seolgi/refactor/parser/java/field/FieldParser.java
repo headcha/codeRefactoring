@@ -1,16 +1,14 @@
 package com.seolgi.refactor.parser.java.field;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import japa.parser.JavaParser;
-import japa.parser.ast.CompilationUnit;
-import japa.parser.ast.body.FieldDeclaration;
-import japa.parser.ast.visitor.VoidVisitorAdapter;
-
+import com.github.javaparser.JavaParser;
+import com.github.javaparser.ast.CompilationUnit;
+import com.github.javaparser.ast.body.FieldDeclaration;
+import com.github.javaparser.ast.visitor.VoidVisitorAdapter;
+import com.seolgi.refactor.parser.java.field.model.FieldInfo;
 import org.apache.commons.io.IOUtils;
 
-import com.seolgi.refactor.parser.java.field.model.FieldInfo;
+import java.util.ArrayList;
+import java.util.List;
 
 public class FieldParser {
 	

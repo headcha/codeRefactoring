@@ -1,13 +1,12 @@
 package com.seolgi.refactor.parser.java.method.model;
 
-import japa.parser.ast.body.MethodDeclaration;
-import japa.parser.ast.body.Parameter;
-import japa.parser.ast.expr.AnnotationExpr;
-import japa.parser.ast.stmt.BlockStmt;
+import com.github.javaparser.ast.body.MethodDeclaration;
+import com.github.javaparser.ast.body.Parameter;
+import com.github.javaparser.ast.expr.AnnotationExpr;
+import com.github.javaparser.ast.stmt.BlockStmt;
+import com.seolgi.refactor.util.StringUtil;
 
 import java.util.List;
-
-import com.seolgi.refactor.util.StringUtil;
 
 public class MethodInfo {
 	private MethodDeclaration methodDeclaration;
@@ -23,11 +22,11 @@ public class MethodInfo {
 	}
 
 	public final int getBodyStartLine() {
-		return methodDeclaration.getBody().getBeginLine() + 1;
+		return methodDeclaration.getBegin().get().line + 1;
 	}
 
 	public BlockStmt getBody() {
-		return methodDeclaration.getBody();
+		return methodDeclaration.getBody().get();
 	}
 	
 	public String getBodyString() {
@@ -51,17 +50,17 @@ public class MethodInfo {
 	}
 
 	public final int getBodyEndLine() {
-		return methodDeclaration.getEndLine() - 1;
+		return methodDeclaration.getEnd().get().line - 1;
 	}
 	
 	public final int getEndLine() {
-		return methodDeclaration.getEndLine();
+		return methodDeclaration.getEnd().get().line;
 	}
 
 
 
 	public String getName() {
-		return methodDeclaration.getName();
+		return methodDeclaration.getNameAsString();
 	}
 	
 	public boolean isShotName() {
@@ -82,7 +81,7 @@ public class MethodInfo {
 	public int getStartLine() {
 		int annotationLength = getAnotationLineLength();
 		
-		return methodDeclaration.getBeginLine() + annotationLength;
+		return methodDeclaration.getBegin().get().line + annotationLength;
 	}
 
 	private int getAnotationLineLength() {

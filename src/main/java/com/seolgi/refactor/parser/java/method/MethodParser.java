@@ -1,15 +1,14 @@
 package com.seolgi.refactor.parser.java.method;
 
+import com.github.javaparser.JavaParser;
+import com.github.javaparser.ast.CompilationUnit;
+import com.github.javaparser.ast.body.MethodDeclaration;
+import com.github.javaparser.ast.visitor.VoidVisitorAdapter;
 import com.seolgi.refactor.parser.java.method.model.MethodInfo;
-import japa.parser.JavaParser;
-import japa.parser.ast.CompilationUnit;
-import japa.parser.ast.body.MethodDeclaration;
-import japa.parser.ast.visitor.VoidVisitorAdapter;
+import org.apache.commons.io.IOUtils;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import org.apache.commons.io.IOUtils;
 
 
 public class MethodParser {

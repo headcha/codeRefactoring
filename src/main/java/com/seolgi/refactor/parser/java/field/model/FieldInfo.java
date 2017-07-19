@@ -1,7 +1,9 @@
 package com.seolgi.refactor.parser.java.field.model;
 
-import japa.parser.ast.body.FieldDeclaration;
-import japa.parser.ast.body.ModifierSet;
+import com.github.javaparser.ast.Modifier;
+import com.github.javaparser.ast.body.FieldDeclaration;
+
+import java.util.EnumSet;
 
 public class FieldInfo {
 	
@@ -16,7 +18,7 @@ public class FieldInfo {
 	}
 	
 	public boolean isStatic() {
-		return ModifierSet.isStatic(this.getModifier());
+		return this.getModifier().stream().anyMatch(modifier -> modifier.equals(Modifier.STATIC));
 	}
 	
 	public boolean isWritableStatic() {
@@ -24,15 +26,15 @@ public class FieldInfo {
 	}
 
 	private boolean isNotFinal() {
-		return ModifierSet.isFinal(this.getModifier()) == false;
+		return this.getModifier().stream().anyMatch(modifier -> modifier.equals(Modifier.FINAL)) == false;
 	}
 
-	private int getModifier() {
+	private EnumSet<Modifier> getModifier() {
 		return fieldDeclaration.getModifiers();
 	}
 
 	public int getLineNumber() {
-		return fieldDeclaration.getBeginLine();
+		return fieldDeclaration.getBegin().get().line;
 	}
 
 	public String getFieldName() {
@@ -45,6 +47,6 @@ public class FieldInfo {
 	}
 
 	public boolean isPublic() {
-		return ModifierSet.isPublic(this.getModifier());
+		return this.getModifier().stream().anyMatch(modifier -> modifier.equals(Modifier.PUBLIC));
 	}
 }

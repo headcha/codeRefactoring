@@ -26,7 +26,9 @@ public class MethodParserTest {
 	
 	@Test
 	public void testMethodParser_어노테이션메서드_라인넘버_테스트() throws Exception {
+		System.out.println(LegacyCodeUtil.getAnotationMethodInfoCode());
 		String legacy = JavaCodeFormatter.reFormat(LegacyCodeUtil.getAnotationMethodInfoCode());
+		System.out.println(legacy);
 		MethodParser methodParser = new MethodParser(legacy);
 		MethodInfo methodInfo = methodParser.getMethodInfoList().get(0);
 		
