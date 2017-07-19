@@ -7,10 +7,11 @@ import java.util.List;
 import com.seolgi.refactor.advice.rule.model.Advice;
 
 public class AdviceCommand {
-	
+	private static CatchPrintLogRule catchPrintLogRule = new CatchPrintLogRule();
+
 	public static List<Advice> checkAllAdviceRule(String legacy) {
-		List<Advice> adviceList = new ArrayList<Advice>();
-		adviceList.add(new CatchPrintLogRule().checkRule(legacy));
+		List<Advice> adviceList = new ArrayList<>();
+		adviceList.add(catchPrintLogRule.checkRule(legacy));
 		adviceList.add(new ConditionalComplexityRule().checkRule(legacy));
 		adviceList.add(new DeepNestingRule().checkRule(legacy));
 		adviceList.add(new LongMethodRule().checkRule(legacy));

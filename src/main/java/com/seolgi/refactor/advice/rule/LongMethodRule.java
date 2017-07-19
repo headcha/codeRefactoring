@@ -10,18 +10,18 @@ import com.seolgi.refactor.parser.java.method.model.MethodInfo;
 
 class LongMethodRule implements AdviceRule {
 
-	private static final int LONG_METHOD_LINE = 15;
+	private static final int LONG_METHOD_LINE = 30;
 
 	public Advice checkRule(String legacyCode) {
 
 		List<MethodInfo> longLineMethodList = filterLongLineMethodList(legacyCode);
 		Advice advice = new LongMethod();
-		addpendLegacyLine(longLineMethodList, advice);
+		appendLegacyLine(longLineMethodList, advice);
 
 		return advice;
 	}
 
-	private void addpendLegacyLine(List<MethodInfo> longLineMethodList, Advice advice) {
+	private void appendLegacyLine(List<MethodInfo> longLineMethodList, Advice advice) {
 		for (MethodInfo method : longLineMethodList)
 			for (int codeLineNumber = method.getBodyStartLine(); codeLineNumber <= method.getBodyEndLine(); codeLineNumber++)
 				advice.addLegacyLineNumber(codeLineNumber);

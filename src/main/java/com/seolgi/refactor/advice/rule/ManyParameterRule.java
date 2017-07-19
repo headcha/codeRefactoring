@@ -15,7 +15,7 @@ import com.seolgi.refactor.parser.java.method.model.MethodInfo;
  * 
  */
 class ManyParameterRule implements AdviceRule {
-	private static final int LONG_PARAMETER_SIZE = 3;
+	private static final int LONG_PARAMETER_SIZE = 5;
 	/**
 	 * 메소드 파라메터 갯수를 체크해 어드바이스 한다
 	 * 
@@ -25,12 +25,12 @@ class ManyParameterRule implements AdviceRule {
 	public Advice checkRule(String legacyCode) {
 		List<MethodInfo> longParameterMethodList = filterLongParameterMethodList(legacyCode);
 		Advice advice = new ManyParameter();
-		addpendLegacyLine(longParameterMethodList, advice);
+		appendLegacyLine(longParameterMethodList, advice);
 
 		return advice;
 	}
 
-	private void addpendLegacyLine(List<MethodInfo> longParameterMethodList, Advice advice) {
+	private void appendLegacyLine(List<MethodInfo> longParameterMethodList, Advice advice) {
 		for (MethodInfo method : longParameterMethodList)
 			advice.addLegacyLineNumber(method.getStartLine());
 	}
