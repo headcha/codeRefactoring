@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <!-- turn this on for debugging -->
+    <!--<statusListener class="ch.qos.logback.core.status.OnConsoleStatusListener" />-->
+    <!-- &#124; is a pipe | character. Janino is silly -->
+    <if condition='property("env").equalsIgnoreCase("local")'>
+        <then>
+            <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+                <encoder>
+                    <pattern>common</pattern>
+                </encoder>
+            </appender>
+
+            <appender-ref ref="STDOUT" />
+        </then>
+    </if>
+
+    <if condition='property("env").equalsIgnoreCase("dev")'>
+        <then>
+            <appender name="dailyRolling" class="ch.qos.logback.core.rolling.RollingFileAppender">
+                <file>${HOME}/skt/was/apps/${instance.name}/logs/sktbackoffice-${instance.name}-access.log</file>
+                <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+                    <fileNamePattern>${HOME}/skt/was/apps/${instance.name}/logs/sktbackoffice-${instance.name}-access-%d{yyyy-MM-dd}.log</fileNamePattern>
+                    <maxHistory>61</maxHistory>
+                </rollingPolicy>
+                <encoder>
+                    <pattern>common</pattern>
+                </encoder>
+            </appender>
+
+            <appender-ref ref="dailyRolling" />
+        </then>
+    </if>
+
+    <if condition='property("env").equalsIgnoreCase("real")'>
+        <then>
+            <appender name="dailyRolling" class="ch.qos.logback.core.rolling.RollingFileAppender">
+                <file>/skt/was/apps/${instance.name}/logs/sktbackoffice-${instance.name}-access.log</file>
+                <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+                    <fileNamePattern>/skt/was/apps/${instance.name}/logs/sktbackoffice-${instance.name}-access-%d{yyyy-MM-dd}.log</fileNamePattern>
+                    <maxHistory>61</maxHistory>
+                </rollingPolicy>
+                <encoder>
+                    <pattern>common</pattern>
+                </encoder>
+            </appender>
+
+            <appender-ref ref="dailyRolling" />
+        </then>
+    </if>
+</configuration>
