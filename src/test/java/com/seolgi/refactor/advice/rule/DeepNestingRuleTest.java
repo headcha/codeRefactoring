@@ -21,6 +21,7 @@ public class DeepNestingRuleTest {
 		String legacy = JavaCodeFormatter.reFormat(LegacyCodeUtil.getDeepNestingCode());
 		System.out.println(legacy);
 		Advice expectedAdvice = adviceService.checkRule(legacy);
+		adviceService.checkRule2(legacy);
 		System.out.println(expectedAdvice.getLegacyLineNumberList());
 		assertTrue(expectedAdvice.isAdvice());
 		
