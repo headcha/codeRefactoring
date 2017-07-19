@@ -12,10 +12,10 @@ tmp/
 local.properties
 .settings/
 .loadpath
-
+.*iml
 # Eclipse Core
 .project
-
+.idea/
 # External tool builders
 .externalToolBuilders/
 
@@ -45,7 +45,7 @@ local.properties
 *.iml
 
 ## Directory-based project format:
-.idea/
+.idea/*
 # if you remove the above rule, at least ignore the following:
 
 # User-specific stuff:
