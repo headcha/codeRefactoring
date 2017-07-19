@@ -37,9 +37,9 @@ public class JavaCodeFormatter {
 		@SuppressWarnings("unchecked")
 		Map<String, String> options = DefaultCodeFormatterConstants.getEclipseDefaultSettings();
 
-		options.put(JavaCore.COMPILER_COMPLIANCE, JavaCore.VERSION_1_6);
-		options.put(JavaCore.COMPILER_CODEGEN_TARGET_PLATFORM, JavaCore.VERSION_1_6);
-		options.put(JavaCore.COMPILER_SOURCE, JavaCore.VERSION_1_6);
+		options.put(JavaCore.COMPILER_COMPLIANCE, JavaCore.VERSION_1_7);
+		options.put(JavaCore.COMPILER_CODEGEN_TARGET_PLATFORM, JavaCore.VERSION_1_7);
+		options.put(JavaCore.COMPILER_SOURCE, JavaCore.VERSION_1_7);
 
 		options.put(DefaultCodeFormatterConstants.FORMATTER_ALIGNMENT_FOR_ENUM_CONSTANTS, DefaultCodeFormatterConstants.createAlignmentValue(true, DefaultCodeFormatterConstants.WRAP_ONE_PER_LINE, DefaultCodeFormatterConstants.INDENT_ON_COLUMN));
 		options.put(DefaultCodeFormatterConstants.FORMATTER_LINE_SPLIT, "400");
