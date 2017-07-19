@@ -115,3 +115,4 @@ domain/src/main/java/META-INF/
 # JRebel, PMD plugin
 .pmd
 rebel.xml
+hs_err_pid13898.log
